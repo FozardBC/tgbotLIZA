@@ -10,6 +10,8 @@ COPY go.mod ./
 COPY go.sum ./
 RUN go mod download
 
+
+
 COPY . .
 
 RUN go build -o bot .
@@ -20,6 +22,8 @@ FROM alpine:latest
 WORKDIR /app
 
 COPY --from=builder /app/bot .
+
+COPY ./html ./html
 
 # Установим корневой сертификат (если телеграм требует TLS)
 
