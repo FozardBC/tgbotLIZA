@@ -1,4 +1,4 @@
-version: '3.8'
+version: '2.2'
 
 services:
   telegram-bot:
@@ -6,7 +6,6 @@ services:
     container_name: telegram-bot
     restart: unless-stopped
     environment:
-      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN}
       URL: 193.228.139.182:8080
     ports:
       - 8080:8080

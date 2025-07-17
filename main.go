@@ -13,7 +13,7 @@ import (
 func main() {
 
 	url := os.Getenv("URL")
-	token := "7227580752:AAGqsim4fWUv_rWH9GI4hSV08bnBMPa0WwY"
+	token := "7875042854:AAFX1Iql-Db1i_4JAb7eMV3sABRPxnfkrso"
 
 	fmt.Print("\nURL:" + url + "\n")
 
