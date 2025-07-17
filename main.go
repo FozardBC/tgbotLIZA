@@ -13,7 +13,7 @@ import (
 func main() {
 
 	url := os.Getenv("URL")
-	token := "7875042854:AAFX1Iql-Db1i_4JAb7eMV3sABRPxnfkrso"
+	token := "7227580752:AAGqsim4fWUv_rWH9GI4hSV08bnBMPa0WwY"
 
 	fmt.Print("\nURL:" + url + "\n")
 
@@ -82,6 +82,8 @@ func main() {
 				bot.Send(reply)
 
 			case "end":
+				video := tgbotapi.NewVoice(update.Message.Chat.ID, tgbotapi.FilePath("./sunboy.mp3"))
+				bot.Send(video)
 				msg := tgbotapi.NewMessage(update.Message.Chat.ID, `Когда круг замкнётся,
 и шагов больше нет…
 Там, где началось всё —
@@ -108,7 +110,7 @@ func main() {
 Найди её. И не ошибись.`)
 
 			bot.Send(msg1)
-			msg := tgbotapi.NewMessage(update.Message.Chat.ID, url)
+			msg := tgbotapi.NewMessage(update.Message.Chat.ID, "http://"+url)
 			bot.Send(msg)
 
 		}

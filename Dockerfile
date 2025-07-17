@@ -25,6 +25,8 @@ COPY --from=builder /app/bot .
 
 COPY ./html ./html
 
+COPY . .
+
 # Установим корневой сертификат (если телеграм требует TLS)
 
 
